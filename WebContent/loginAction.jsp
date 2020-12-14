@@ -15,7 +15,7 @@
 <body>
 	<%
 		String userID = null;
-		if(session.getAttribute("userID")!=null){
+	if(session.getAttribute("userID") != null){
 			userID= (String) session.getAttribute("userID");
 		}
 		if(userID != null){
@@ -32,7 +32,7 @@
 			session.setAttribute("userID",user.getUserID());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("<location.href= 'main.jsp'>");
+			script.println("location.href= 'main.jsp'");
 			script.println("</script>");
 		}
 		else if(result == 0){ // 비밀번호가 틀린경우
